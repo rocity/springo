@@ -1,7 +1,6 @@
 export const one = require('./one.png')
 export const two = require('./two.png')
 export const three = require('./three.png')
-export const bigimage = require('./bigimage.png')
 
 export const discoball = require('./rowslide/discoball.png')
 export const dj = require('./rowslide/dj.png')
