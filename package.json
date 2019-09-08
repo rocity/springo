@@ -9,6 +9,7 @@
     "@types/node": "12.7.4",
     "@types/nuka-carousel": "^4.4.6",
     "@types/styled-components": "^4.1.18",
+    "@types/react-router-dom": "^4.3.5",
     "d3-ease": "^1.0.5",
     "nuka-carousel": "^4.5.11",
     "react": "^16.9.0",
@@ -45,8 +46,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-router-dom": "^4.3.5"
+    "@types/react-dom": "^16.9.0"
   },
   "engines": {
     "node": "10.16.0"
