@@ -24,9 +24,8 @@ const Section2: React.FC = () => {
 
 const Wrapper = styled.section`
   display: flex;
-  padding: 6vw 5% 0;
-  background-color: #d63031;
-  height: 50vh;
+  padding: 5%;
+  background-color: #16a085;
 `
 
 const TextSection = styled.div`

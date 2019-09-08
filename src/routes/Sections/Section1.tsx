@@ -36,7 +36,7 @@ const Section1: React.FC = () => {
     to: { opacity: 1 },
     // leave: {opacity: 0},
     ref: imageOneRef,
-    config: { native: true }
+    config: config.slow
   })
 
   useChain(
@@ -46,23 +46,28 @@ const Section1: React.FC = () => {
 
   return (
     <Wrapper style={wrapperProps}>
-      <TextSection>
-        <TitleWrapper style={titleProps}>
-          <Title>{`BUILD ONE TODAY\nDISINTIGRATE LATER`}</Title>
-        </TitleWrapper>
-        <CaptionWrapper style={captionProps}>
-          <Caption>{`Peanuts aren’t technically nuts`}</Caption>
-        </CaptionWrapper>
-      </TextSection>
-      <ImageSection>
-        <Image1 style={imageOneProps} src={img.one} />
-      </ImageSection>
+
+        <TextSection>
+          <TitleWrapper style={titleProps}>
+            <Title>{`BUILD ONE TODAY\nDISINTIGRATE LATER`}</Title>
+          </TitleWrapper>
+          <CaptionWrapper style={captionProps}>
+            <Caption>{`Peanuts aren’t technically nuts`}</Caption>
+          </CaptionWrapper>
+        </TextSection>
+        <ImageSection>
+          <Image1 style={imageOneProps} src={img.one} />
+        </ImageSection>
 
     </Wrapper>
   )
 }
 
 const Wrapper = styled(a.section)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   padding: 100px 5% 0;
   background-color: #222;
   height: 100vh;

@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.35",
+    "@types/d3-ease": "^1.0.8",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
     "@types/nuka-carousel": "^4.4.6",
     "@types/styled-components": "^4.1.18",
+    "d3-ease": "^1.0.5",
     "nuka-carousel": "^4.5.11",
     "react": "^16.9.0",
     "react-bottom-scroll-listener": "^3.0.0",
