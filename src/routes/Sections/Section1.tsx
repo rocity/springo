@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import styled from 'styled-components'
-import { animated as a, useChain, useSpring, config } from 'react-spring'
+import { animated as a, useChain, useSpring, useTransition, config } from 'react-spring'
 
 import * as img from '../../assets';
 
@@ -66,6 +66,7 @@ const Wrapper = styled(a.section)`
   padding: 100px 5% 0;
   background-color: #222;
   height: 100vh;
+  overflow: hidden;
 `
 
 const Title = styled.h1`
@@ -90,8 +91,13 @@ const TextSection = styled.div`
 `
 
 const ImageSection = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
   img {
-    position: absolute;
+    position: relative;
+    width: 30vw;
+    bottom: 100px
   }
 `
 

@@ -3,16 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^1.0.35",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
+    "@types/nuka-carousel": "^4.4.6",
     "@types/styled-components": "^4.1.18",
+    "nuka-carousel": "^4.5.11",
     "react": "^16.9.0",
+    "react-bottom-scroll-listener": "^3.0.0",
     "react-dom": "^16.9.0",
+    "react-intersection-observer": "^8.24.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-spring": "^8.0.27",
     "styled-components": "^4.3.2",
-    "typescript": "3.6.2"
+    "typescript": "3.6.2",
+    "use-react-router": "^1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

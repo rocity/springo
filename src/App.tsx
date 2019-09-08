@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom';
 import Sections from './routes/Sections';
+import useReactRouter from 'use-react-router';
+import { useTransition, animated as a } from 'react-spring'
 import './App.css';
 
 import * as images from './assets'
@@ -12,6 +14,13 @@ const imageList = Object.values(images)
 const App: React.FC = () => {
   const [loaded, setLoaded] = useState(false)
   const [count, incrementCount] = useState(0)
+
+  const {location} = useReactRouter();
+  const transitions = useTransition(location, location => location.pathname, {
+    from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
+    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+    leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
+  })
 
   useEffect(() => {
     if (count === imageList.length) {
@@ -33,11 +42,13 @@ const App: React.FC = () => {
     <Main>
       <Suspense fallback={<LoaderWrapper />}>
         {loaded ? (
-          <>
-            <Switch>
-              <Route exact path="/" component={Sections}></Route>
-            </Switch>
-          </>
+          transitions.map(({item, props, key}) => (
+            <a.div style={props} key={key}>
+              <Switch location={item}>
+                <Route exact path="/" component={Sections}></Route>
+              </Switch>
+            </a.div>
+          ))
         ) : (
           <LoaderWrapper>
             <h1>Loading your magazines...</h1>
